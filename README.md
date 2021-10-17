@@ -1,6 +1,6 @@
 Self practicing cheat-sheet for iptables, ufw 
-
-# iptables-commands
+in iptables  
+# iptables-commands (NOT TESTED ENOUGH). Please use UFW or AWS SG
 
 
 list all the rules of iptables
@@ -30,4 +30,12 @@ iptables -I INPUT -j DROP
 now allow all outgoing domain/ip .
 ```console
 iptables -D INPUT -j DROP
+```
+
+allow/deny particular ip for incoming/outgoing
+``console
+iptables -A INPUT -s 192.168.1.1 -j ACCEPT
+iptables -A OUTPUT -d 192.168.1.1 -j ACCEPT
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
 ```
