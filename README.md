@@ -20,3 +20,9 @@ allow/cancel rule of an outgoing domain/ip
 ```console
 iptables -D INPUT -s www.agoda.com -j DROP
 ```
+
+cancel all outgoing domain/ip . here -P for policy
+```console
+iptables -P INPUT  DROP
+```
+
