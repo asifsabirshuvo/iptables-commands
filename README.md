@@ -1,4 +1,4 @@
 # iptables-commands
-```bash
+```console
 iptables -L -n -v
 ```
