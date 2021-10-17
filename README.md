@@ -33,9 +33,15 @@ iptables -D INPUT -j DROP
 ```
 
 allow/deny particular ip for incoming/outgoing
-``console
+```console
 iptables -A INPUT -s 192.168.1.1 -j ACCEPT
+```
+```console
 iptables -A OUTPUT -d 192.168.1.1 -j ACCEPT
+```
+```console
 iptables -P INPUT DROP
+```
+```console
 iptables -P OUTPUT DROP
 ```
