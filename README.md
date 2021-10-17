@@ -1,2 +1,4 @@
 # iptables-commands
-> iptables -L -n -v
+```bash
+iptables -L -n -v
+```
