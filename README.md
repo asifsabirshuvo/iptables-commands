@@ -21,8 +21,12 @@ allow/cancel rule of an outgoing domain/ip
 iptables -D INPUT -s www.agoda.com -j DROP
 ```
 
-cancel all outgoing domain/ip . here -P for policy
+cancel all outgoing domain/ip .
 ```console
-iptables -P INPUT  DROP
+iptables -I INPUT -j DROP
 ```
 
+now allow all outgoing domain/ip .
+```console
+iptables -D INPUT -j DROP
+```
